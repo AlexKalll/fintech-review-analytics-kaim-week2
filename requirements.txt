@@ -7,3 +7,6 @@ matplotlib
 oracledb
 scikit-learn
 spacy
+wordcloud
+tqdm==4.66.5
+transformers==4.44.2
