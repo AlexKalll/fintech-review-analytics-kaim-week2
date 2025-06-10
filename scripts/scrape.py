@@ -33,12 +33,13 @@ def fetch_reviews(app_id, app_name, max_reviews=500):
     }, inplace=True)
     return df
 
-def save_reviews(df, bank_name):
-    today = datetime.now().strftime("%Y-%m-%d")
-    os.makedirs("data/raw", exist_ok=True)
-    file_path = f"data/raw/{bank_name}_reviews_{today}.csv"
-    df.to_csv(file_path, index=False)
-    print(f"Saved {len(df)} reviews to {file_path}")
+# this is unnecessary since it is being saved on the <bank name>_scrape_reviews.ipynb files in the notebooks/
+# def save_reviews(df, bank_name):
+#     today = datetime.now().strftime("%Y-%m-%d")
+#     os.makedirs("data/raw", exist_ok=True)
+#     file_path = f"data/raw/{bank_name}_reviews_{today}.csv"
+#     df.to_csv(file_path, index=False)
+#     print(f"Saved {len(df)} reviews to {file_path}")
 
 def scrape_and_save():
     apps = {
